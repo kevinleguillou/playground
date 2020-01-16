@@ -19,9 +19,10 @@ nav{ position: relative; display: flex; flex-direction: column; height: 100%; pa
 /* Carousel */
 
 .carousel-container{ position: absolute; display: flex; width: 100%; height: 100%; overflow: hidden; }
-.carousel-container section{ display: flex; flex: 0 0 auto; width: 100%; transition: all 500ms ease; }
-.carousel-container .slide-1{ background: #505050; }
-.carousel-container .slide-2{ background: #2d2d2d; }
-.text{ font-size: 6vw; color: white; text-align: center; margin: auto 10vw 80vw; transition: all 1s ease; }
+.carousel-container section{ position: relative; display: flex; flex: 0 0 auto; width: 100%; transition: all 500ms ease; }
+.carousel-container section:before{ display: block; content: ""; position: absolute; top: 0; left: 0; z-index: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
+.carousel-container .slide-1{ background: #505050 url(assets/background-1.jpg) no-repeat center center / cover; }
+.carousel-container .slide-2{ background: #2d2d2d url(assets/background-2.jpg) no-repeat center center / cover; }
+.text{ position: relative; font-size: 6vw; color: white; text-align: center; margin: auto 10vw 80vw; transition: all 1s ease; }
 .carousel-container section.moving{ transition: none; }
 .carousel-container section.moving .text{ transition: none; }
